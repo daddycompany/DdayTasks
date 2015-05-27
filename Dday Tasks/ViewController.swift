@@ -8,50 +8,53 @@
 
 import UIKit
 
+//전역적으로 사용할 싱글턴 객체
 struct Static {
     static var _viewControll:ViewController!
 }
 
 class ViewController: UIViewController {
-
+    
+    //xib의 컬렉션뷰 아울렛
     @IBOutlet var collectionView: UICollectionView!
+    
+    //컬렉션 뷰에 사용할 데이터
     var tasksList = ["test","test1","test","test1","test","test1","test","test1","test","test1"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         Static._viewControll = self
         
-        // Do any additional setup after loading the view, typically from a nib.
-        
+        //위젯과 공유할 데이터 객체 생성,사용,동기화 예제
         let shareDefaults = NSUserDefaults(suiteName: "group.neocompany.ddaytasks")
         shareDefaults?.setObject("Message", forKey: "stringKey")
         shareDefaults?.synchronize()
         
-        Logger.log("viewDidLoad")
-
-        
+        //캘린더나, 리마인더에 등록된 일정 데이터 로드 호출
         CalendarEvent.getTasks()
         CalendarEvent.getEvents()
-        
+
+        //알람 설정
         setNotification()
+    }
+    
+    //기기의 메모리 워닝 발생시 호출 되는 함수, 통상적으로 메모리 사용을 줄이는 처리를 해주면 됨 (동작중인 작업 정지 등..)
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     
     // MARK: UICollectionViewDataSource
-    
-    // 섹션 갯수
+    // 섹션 갯수 : 아이템이 반복되는 횟수 1로 두면 됨 , 2일때는 아이템이 2개씩 배치됨
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
-    
-    //2
+    //2 콜렉션 뷰의 아이템 갯수 반환
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         println("collectionView justcount \(tasksList.count)");
         return tasksList.count
     }
-    
-    //3
+    //3 컬렉션 뷰의 셀을 생성 해주는 함수
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         //        println("collectionView append \(indexPath.row)");
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("TaskCell", forIndexPath: indexPath) as! TaskCell
@@ -59,11 +62,9 @@ class ViewController: UIViewController {
         let sizeH = 50
         cell.index = indexPath.row
         cell.text.text = tasksList[indexPath.row]
-        
-        
         return cell
     }
-    
+    //컬렉션뷰의 셀 사이즈를 반환
     func collectionView(collectionView: UICollectionView!,
         layout collectionViewLayout: UICollectionViewLayout!,
         sizeForItemAtIndexPath indexPath: NSIndexPath!) -> CGSize {
@@ -78,12 +79,13 @@ class ViewController: UIViewController {
         
     }
     
-    
-    
+    //로컬 푸쉬 및 알람 노출시 액션 처리 예제
     func setNotification(){
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:"drawAShape:", name: "actionOnePressed", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:"showAMessage:", name: "actionTwoPressed", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"handle_actionOne:", name: "actionOnePressed", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"handle_actionTwo:", name: "actionTwoPressed", object: nil)
         
+        //로컬 푸쉬 시간값 생성 예제 
+        /*
         var dateComp:NSDateComponents = NSDateComponents()
         dateComp.year = 2014;
         dateComp.month = 06;
@@ -91,8 +93,9 @@ class ViewController: UIViewController {
         dateComp.hour = 15;
         dateComp.minute = 26;
         dateComp.timeZone = NSTimeZone.systemTimeZone()
+        */
         
-        
+        //15초 후에 로컬알림, 앱 실행 중일때는 나타나지 않음
         var notification:UILocalNotification = UILocalNotification()
         notification.category = "FIRST_CATEGORY"
         notification.alertBody = "Hi, I am a notification"
@@ -101,27 +104,13 @@ class ViewController: UIViewController {
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
     
-    func drawAShape(notification:NSNotification){
-        var view:UIView = UIView(frame:CGRectMake(10, 10, 100, 100))
-        view.backgroundColor = UIColor.redColor()
-        
-        self.view.addSubview(view)
-        
+    func handle_actionOne(notification:NSNotification){
+        Logger.log("handle_actionOne")
     }
     
-    func showAMessage(notification:NSNotification){
-        var message:UIAlertController = UIAlertController(title: "A Notification Message", message: "Hello there", preferredStyle: UIAlertControllerStyle.Alert)
-        message.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        
-        self.presentViewController(message, animated: true, completion: nil)
-        
+    func handle_actionTwo(notification:NSNotification){
+        Logger.log("handle_actionTwo")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 

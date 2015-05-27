@@ -27,7 +27,6 @@ class CalendarEvent{
                 self.parseEvent(eventItem as! EKEvent)
             }
             
-            
             /*
             //캘린더 목록 가져오기
             let calendars = eventStore.calendarsForEntityType(EKEntityTypeEvent)
