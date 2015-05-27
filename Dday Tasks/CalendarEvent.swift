@@ -10,6 +10,9 @@ import Foundation
 import EventKit
 
 class CalendarEvent{
+    
+    static var eventList = [TaskData]()
+    
     static func getTasks(){
         let eventStore:EKEventStore = EKEventStore()
         //접근권한 요청
@@ -21,11 +24,19 @@ class CalendarEvent{
             let events = NSMutableArray(array: eventStore.eventsMatchingPredicate(predicate))
         
             Logger.log("events Count > \(events.count)")
-            
+
             for eventItem in events{
                 //모든캘린더에 등록된 이벤트 로드 파싱
-                self.parseEvent(eventItem as! EKEvent)
+                let _event:EKEvent = eventItem as! EKEvent
+                if(_event.calendar.title == "Birthdays"){
+                     //생일 이벤트는 제외
+                }else{
+                    let eventData:TaskData = self.parseEvent(_event)
+                    Logger.log("eventData title \(eventData.title)")
+                    self.eventList += [eventData]
+                }
             }
+            
             
             /*
             //캘린더 목록 가져오기
@@ -74,7 +85,7 @@ class CalendarEvent{
     }
 
     
-    static func parseEvent(_event:EKEvent){
+    static func parseEvent(_event:EKEvent) -> TaskData{
         /*
         {	 title = 		테이크웨더 서버 이전;
         location = 	;
@@ -101,44 +112,45 @@ class CalendarEvent{
         */
         
         //Logger.log("event > \(_event)")
+        var returnTaskData = TaskData()
         
         if(_event.calendar.title == "Birthdays"){
-            
+            //생일 이벤트는 제외
         }else{
-            Logger.log("title \(_event.title)")
-            Logger.log("startDate \(_event.startDate)")
+            
+            returnTaskData.originEvent = _event
+            returnTaskData.title = _event.title
+            returnTaskData.startDate = _event.startDate
+            
             var formatter = NSDateFormatter();
             formatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZ";
             let defaultTimeZoneStr = formatter.stringFromDate(_event.startDate);
-            Logger.log("defaultTimeZoneStr \(defaultTimeZoneStr)")
-            
             formatter.timeZone = NSTimeZone.localTimeZone()
-            
-            Logger.log("date >  \(formatter.stringFromDate(_event.startDate))")
-            
-            //Logger.log("endDate \(_event.endDate)")
-            //Logger.log("calendar.title \(_event.calendar.title)")
+            returnTaskData.startDateStr = formatter.stringFromDate(_event.startDate)
             
             let now = NSDate()
             let seventies = NSDate(timeIntervalSince1970: 0)
-            
-            // Standard solution still works
             let days = NSCalendar.currentCalendar().components(.CalendarUnitDay,
                 fromDate: now, toDate: _event.startDate, options: nil).day
             
-            Logger.log("days > \(days)")
+            //Logger.log("days > \(days)")
+            returnTaskData.dday = days
             
             let hours = NSCalendar.currentCalendar().components(.CalendarUnitHour,
                 fromDate: now, toDate: _event.startDate, options: nil).hour
             
-            Logger.log("hours > \(hours)")
+            //Logger.log("hours > \(hours)")
+            returnTaskData.hour = hours
             
             let minute = NSCalendar.currentCalendar().components(.CalendarUnitMinute,
                 fromDate: now, toDate: _event.startDate, options: nil).minute
             
-            Logger.log("minute > \(minute)")
+            //Logger.log("minute > \(minute)")
+            returnTaskData.minute = minute
      
         }
+        
+        return returnTaskData
     }
     
     
@@ -158,31 +170,4 @@ class CalendarEvent{
 }
 
 
-
-// Flashy swift... maybe...
-func -(lhs:NSDate, rhs:NSDate) -> DateRange {
-    return DateRange(startDate: rhs, endDate: lhs)
-}
-
-class DateRange {
-    let startDate:NSDate
-    let endDate:NSDate
-    var calendar = NSCalendar.currentCalendar()
-    var days: Int {
-        return calendar.components(.CalendarUnitDay,
-            fromDate: startDate, toDate: endDate, options: nil).day
-    }
-    var months: Int {
-        return calendar.components(.CalendarUnitMonth,
-            fromDate: startDate, toDate: endDate, options: nil).month
-    }
-    init(startDate:NSDate, endDate:NSDate) {
-        self.startDate = startDate
-        self.endDate = endDate
-    }
-    
-    static func getCountDay(lhs:NSDate, rhs:NSDate) -> DateRange {
-        return DateRange(startDate: rhs, endDate: lhs)
-    }
-}
 

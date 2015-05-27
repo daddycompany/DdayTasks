@@ -7,4 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
+class AddTaskController: UIViewController{
+    
+    
+    //뒤로가기, 팝업 닫기 처리 
+    @IBAction func closePopup(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
+}

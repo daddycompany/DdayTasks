@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A07EDFBE1B0E061A00B223A8 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07EDFBD1B0E061A00B223A8 /* CalendarEvent.swift */; };
 		A07EDFC11B0E486F00B223A8 /* OptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07EDFC01B0E486F00B223A8 /* OptionController.swift */; };
-		A07EDFC31B0E48A200B223A8 /* HideTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07EDFC21B0E48A200B223A8 /* HideTaskController.swift */; };
 		A07EDFC51B0E48B800B223A8 /* AddTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07EDFC41B0E48B800B223A8 /* AddTaskController.swift */; };
 		A07EDFC71B0E4F0300B223A8 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07EDFC61B0E4F0300B223A8 /* TaskCell.swift */; };
 		A07EDFC91B0E50D600B223A8 /* TaskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07EDFC81B0E50D600B223A8 /* TaskData.swift */; };
@@ -24,13 +23,10 @@
 		A09BFF161B0CB4F1004070CB /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFF151B0CB4F1004070CB /* TodayViewController.swift */; };
 		A09BFF181B0CB4F1004070CB /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09BFF171B0CB4F1004070CB /* MainInterface.storyboard */; };
 		A09BFF1B1B0CB4F1004070CB /* Widjet.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A09BFF0E1B0CB4F1004070CB /* Widjet.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		A09BFF231B0CB59F004070CB /* TasksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFF221B0CB59F004070CB /* TasksManager.swift */; };
 		A09BFF251B0CB682004070CB /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFF241B0CB682004070CB /* Logger.swift */; };
-		A09BFF261B0CB704004070CB /* TasksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFF221B0CB59F004070CB /* TasksManager.swift */; };
 		A09BFF271B0CB704004070CB /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFF241B0CB682004070CB /* Logger.swift */; };
-		A09BFF291B0CC73B004070CB /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFF281B0CC73B004070CB /* util.swift */; };
-		A09BFF2A1B0CC781004070CB /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFF281B0CC73B004070CB /* util.swift */; };
-		A09BFF2D1B0CD6D9004070CB /* GoogleCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFF2C1B0CD6D9004070CB /* GoogleCalendar.swift */; };
+		A0E036341B157D8500ABB36C /* UtilClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E036331B157D8500ABB36C /* UtilClass.swift */; };
+		A0E036351B157EDC00ABB36C /* UtilClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E036331B157D8500ABB36C /* UtilClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +63,6 @@
 /* Begin PBXFileReference section */
 		A07EDFBD1B0E061A00B223A8 /* CalendarEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
 		A07EDFC01B0E486F00B223A8 /* OptionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionController.swift; sourceTree = "<group>"; };
-		A07EDFC21B0E48A200B223A8 /* HideTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideTaskController.swift; sourceTree = "<group>"; };
 		A07EDFC41B0E48B800B223A8 /* AddTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskController.swift; sourceTree = "<group>"; };
 		A07EDFC61B0E4F0300B223A8 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		A07EDFC81B0E50D600B223A8 /* TaskData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskData.swift; sourceTree = "<group>"; };
@@ -89,10 +84,8 @@
 		A09BFF171B0CB4F1004070CB /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		A09BFF201B0CB506004070CB /* Widjet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Widjet.entitlements; sourceTree = "<group>"; };
 		A09BFF211B0CB513004070CB /* Dday Tasks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Dday Tasks.entitlements"; sourceTree = "<group>"; };
-		A09BFF221B0CB59F004070CB /* TasksManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksManager.swift; sourceTree = "<group>"; };
 		A09BFF241B0CB682004070CB /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		A09BFF281B0CC73B004070CB /* util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = util.swift; sourceTree = "<group>"; };
-		A09BFF2C1B0CD6D9004070CB /* GoogleCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleCalendar.swift; sourceTree = "<group>"; };
+		A0E036331B157D8500ABB36C /* UtilClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,22 +146,19 @@
 		A09BFEE41B0CB4E0004070CB /* Dday Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				A07EDFBF1B0E2A5B00B223A8 /* ItemCell */,
-				A09BFF2B1B0CD1A4004070CB /* task */,
-				A09BFF211B0CB513004070CB /* Dday Tasks.entitlements */,
 				A09BFEE71B0CB4E0004070CB /* AppDelegate.swift */,
 				A09BFEEC1B0CB4E0004070CB /* ViewController.swift */,
-				A09BFEEE1B0CB4E0004070CB /* Main.storyboard */,
-				A09BFEF11B0CB4E0004070CB /* Images.xcassets */,
-				A09BFEF31B0CB4E0004070CB /* LaunchScreen.xib */,
-				A09BFEE91B0CB4E0004070CB /* Dday_Tasks.xcdatamodeld */,
-				A09BFEE51B0CB4E0004070CB /* Supporting Files */,
-				A09BFF221B0CB59F004070CB /* TasksManager.swift */,
-				A09BFF241B0CB682004070CB /* Logger.swift */,
-				A09BFF281B0CC73B004070CB /* util.swift */,
 				A07EDFC01B0E486F00B223A8 /* OptionController.swift */,
-				A07EDFC21B0E48A200B223A8 /* HideTaskController.swift */,
 				A07EDFC41B0E48B800B223A8 /* AddTaskController.swift */,
+				A07EDFBF1B0E2A5B00B223A8 /* ItemCell */,
+				A09BFF2B1B0CD1A4004070CB /* task */,
+				A09BFEEE1B0CB4E0004070CB /* Main.storyboard */,
+				A09BFEF31B0CB4E0004070CB /* LaunchScreen.xib */,
+				A09BFEF11B0CB4E0004070CB /* Images.xcassets */,
+				A09BFEE51B0CB4E0004070CB /* Supporting Files */,
+				A0E036321B157D4C00ABB36C /* etc */,
+				A09BFEE91B0CB4E0004070CB /* Dday_Tasks.xcdatamodeld */,
+				A09BFF211B0CB513004070CB /* Dday Tasks.entitlements */,
 			);
 			path = "Dday Tasks";
 			sourceTree = "<group>";
@@ -228,11 +218,19 @@
 		A09BFF2B1B0CD1A4004070CB /* task */ = {
 			isa = PBXGroup;
 			children = (
-				A09BFF2C1B0CD6D9004070CB /* GoogleCalendar.swift */,
 				A07EDFBD1B0E061A00B223A8 /* CalendarEvent.swift */,
 				A07EDFC81B0E50D600B223A8 /* TaskData.swift */,
 			);
 			name = task;
+			sourceTree = "<group>";
+		};
+		A0E036321B157D4C00ABB36C /* etc */ = {
+			isa = PBXGroup;
+			children = (
+				A09BFF241B0CB682004070CB /* Logger.swift */,
+				A0E036331B157D8500ABB36C /* UtilClass.swift */,
+			);
+			name = etc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,17 +377,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A09BFF251B0CB682004070CB /* Logger.swift in Sources */,
-				A09BFF291B0CC73B004070CB /* util.swift in Sources */,
+				A0E036341B157D8500ABB36C /* UtilClass.swift in Sources */,
 				A07EDFBE1B0E061A00B223A8 /* CalendarEvent.swift in Sources */,
 				A09BFEED1B0CB4E0004070CB /* ViewController.swift in Sources */,
 				A07EDFC71B0E4F0300B223A8 /* TaskCell.swift in Sources */,
 				A07EDFC51B0E48B800B223A8 /* AddTaskController.swift in Sources */,
 				A09BFEEB1B0CB4E0004070CB /* Dday_Tasks.xcdatamodeld in Sources */,
-				A09BFF231B0CB59F004070CB /* TasksManager.swift in Sources */,
 				A07EDFC11B0E486F00B223A8 /* OptionController.swift in Sources */,
-				A09BFF2D1B0CD6D9004070CB /* GoogleCalendar.swift in Sources */,
 				A07EDFC91B0E50D600B223A8 /* TaskData.swift in Sources */,
-				A07EDFC31B0E48A200B223A8 /* HideTaskController.swift in Sources */,
 				A09BFEE81B0CB4E0004070CB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,10 +401,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A09BFF261B0CB704004070CB /* TasksManager.swift in Sources */,
+				A0E036351B157EDC00ABB36C /* UtilClass.swift in Sources */,
 				A09BFF271B0CB704004070CB /* Logger.swift in Sources */,
 				A09BFF161B0CB4F1004070CB /* TodayViewController.swift in Sources */,
-				A09BFF2A1B0CC781004070CB /* util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

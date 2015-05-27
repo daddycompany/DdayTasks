@@ -18,9 +18,6 @@ class ViewController: UIViewController {
     //xib의 컬렉션뷰 아울렛
     @IBOutlet var collectionView: UICollectionView!
     
-    //컬렉션 뷰에 사용할 데이터
-    var tasksList = ["test","test1","test","test1","test","test1","test","test1","test","test1"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         Static._viewControll = self
@@ -30,12 +27,23 @@ class ViewController: UIViewController {
         shareDefaults?.setObject("Message", forKey: "stringKey")
         shareDefaults?.synchronize()
         
+        //리스트 갱신 처리
+        self.listReload()
+        
+        //알람 설정
+        setNotification()
+    }
+    
+    //컬렉션뷰 갱신처리 
+    func listReload(){
         //캘린더나, 리마인더에 등록된 일정 데이터 로드 호출
         CalendarEvent.getTasks()
         CalendarEvent.getEvents()
-
-        //알람 설정
-        setNotification()
+        
+        //캘린더 데이터 로딩 되는 시간 대기 후 갱신
+        delay(0.5){
+            self.collectionView.reloadData()
+        }
     }
     
     //기기의 메모리 워닝 발생시 호출 되는 함수, 통상적으로 메모리 사용을 줄이는 처리를 해주면 됨 (동작중인 작업 정지 등..)
@@ -51,17 +59,17 @@ class ViewController: UIViewController {
     }
     //2 콜렉션 뷰의 아이템 갯수 반환
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        println("collectionView justcount \(tasksList.count)");
-        return tasksList.count
+        Logger.log("CalendarEvent.eventList.count > \(CalendarEvent.eventList.count)")
+        return CalendarEvent.eventList.count
     }
     //3 컬렉션 뷰의 셀을 생성 해주는 함수
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         //        println("collectionView append \(indexPath.row)");
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("TaskCell", forIndexPath: indexPath) as! TaskCell
-        let sizeW = self.view.frame.size.width
-        let sizeH = 50
+    
+        let taskData:TaskData = CalendarEvent.eventList[indexPath.row]
         cell.index = indexPath.row
-        cell.text.text = tasksList[indexPath.row]
+        cell.text.text = taskData.title
         return cell
     }
     //컬렉션뷰의 셀 사이즈를 반환

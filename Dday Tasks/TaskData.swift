@@ -14,8 +14,11 @@ class TaskData{
         
     }
     
+    var originEvent:EKEvent!
     var title = ""
     var startDate:NSDate!
+    var startDateStr:String!
+    
     var dday:Int!
     var hour:Int!
     var minute:Int!
