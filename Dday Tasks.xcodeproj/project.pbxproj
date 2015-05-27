@@ -1,0 +1,673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A07EDFBE1B0E061A00B223A8 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07EDFBD1B0E061A00B223A8 /* CalendarEvent.swift */; };
+		A07EDFC11B0E486F00B223A8 /* OptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07EDFC01B0E486F00B223A8 /* OptionController.swift */; };
+		A07EDFC31B0E48A200B223A8 /* HideTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07EDFC21B0E48A200B223A8 /* HideTaskController.swift */; };
+		A07EDFC51B0E48B800B223A8 /* AddTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07EDFC41B0E48B800B223A8 /* AddTaskController.swift */; };
+		A07EDFC71B0E4F0300B223A8 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07EDFC61B0E4F0300B223A8 /* TaskCell.swift */; };
+		A07EDFC91B0E50D600B223A8 /* TaskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07EDFC81B0E50D600B223A8 /* TaskData.swift */; };
+		A09BFEE81B0CB4E0004070CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFEE71B0CB4E0004070CB /* AppDelegate.swift */; };
+		A09BFEEB1B0CB4E0004070CB /* Dday_Tasks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A09BFEE91B0CB4E0004070CB /* Dday_Tasks.xcdatamodeld */; };
+		A09BFEED1B0CB4E0004070CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFEEC1B0CB4E0004070CB /* ViewController.swift */; };
+		A09BFEF01B0CB4E0004070CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09BFEEE1B0CB4E0004070CB /* Main.storyboard */; };
+		A09BFEF21B0CB4E0004070CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A09BFEF11B0CB4E0004070CB /* Images.xcassets */; };
+		A09BFEF51B0CB4E0004070CB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A09BFEF31B0CB4E0004070CB /* LaunchScreen.xib */; };
+		A09BFF011B0CB4E0004070CB /* Dday_TasksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFF001B0CB4E0004070CB /* Dday_TasksTests.swift */; };
+		A09BFF111B0CB4F1004070CB /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A09BFF101B0CB4F1004070CB /* NotificationCenter.framework */; };
+		A09BFF161B0CB4F1004070CB /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFF151B0CB4F1004070CB /* TodayViewController.swift */; };
+		A09BFF181B0CB4F1004070CB /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09BFF171B0CB4F1004070CB /* MainInterface.storyboard */; };
+		A09BFF1B1B0CB4F1004070CB /* Widjet.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A09BFF0E1B0CB4F1004070CB /* Widjet.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A09BFF231B0CB59F004070CB /* TasksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFF221B0CB59F004070CB /* TasksManager.swift */; };
+		A09BFF251B0CB682004070CB /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFF241B0CB682004070CB /* Logger.swift */; };
+		A09BFF261B0CB704004070CB /* TasksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFF221B0CB59F004070CB /* TasksManager.swift */; };
+		A09BFF271B0CB704004070CB /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFF241B0CB682004070CB /* Logger.swift */; };
+		A09BFF291B0CC73B004070CB /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFF281B0CC73B004070CB /* util.swift */; };
+		A09BFF2A1B0CC781004070CB /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFF281B0CC73B004070CB /* util.swift */; };
+		A09BFF2D1B0CD6D9004070CB /* GoogleCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BFF2C1B0CD6D9004070CB /* GoogleCalendar.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A09BFEFB1B0CB4E0004070CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A09BFEDA1B0CB4E0004070CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A09BFEE11B0CB4E0004070CB;
+			remoteInfo = "Dday Tasks";
+		};
+		A09BFF191B0CB4F1004070CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A09BFEDA1B0CB4E0004070CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A09BFF0D1B0CB4F1004070CB;
+			remoteInfo = Widjet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A09BFF1F1B0CB4F1004070CB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A09BFF1B1B0CB4F1004070CB /* Widjet.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A07EDFBD1B0E061A00B223A8 /* CalendarEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
+		A07EDFC01B0E486F00B223A8 /* OptionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionController.swift; sourceTree = "<group>"; };
+		A07EDFC21B0E48A200B223A8 /* HideTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideTaskController.swift; sourceTree = "<group>"; };
+		A07EDFC41B0E48B800B223A8 /* AddTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskController.swift; sourceTree = "<group>"; };
+		A07EDFC61B0E4F0300B223A8 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		A07EDFC81B0E50D600B223A8 /* TaskData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskData.swift; sourceTree = "<group>"; };
+		A09BFEE21B0CB4E0004070CB /* Dday Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dday Tasks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A09BFEE61B0CB4E0004070CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A09BFEE71B0CB4E0004070CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A09BFEEA1B0CB4E0004070CB /* Dday_Tasks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dday_Tasks.xcdatamodel; sourceTree = "<group>"; };
+		A09BFEEC1B0CB4E0004070CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A09BFEEF1B0CB4E0004070CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A09BFEF11B0CB4E0004070CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A09BFEF41B0CB4E0004070CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A09BFEFA1B0CB4E0004070CB /* Dday TasksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dday TasksTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A09BFEFF1B0CB4E0004070CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A09BFF001B0CB4E0004070CB /* Dday_TasksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dday_TasksTests.swift; sourceTree = "<group>"; };
+		A09BFF0E1B0CB4F1004070CB /* Widjet.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Widjet.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A09BFF101B0CB4F1004070CB /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		A09BFF141B0CB4F1004070CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A09BFF151B0CB4F1004070CB /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		A09BFF171B0CB4F1004070CB /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		A09BFF201B0CB506004070CB /* Widjet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Widjet.entitlements; sourceTree = "<group>"; };
+		A09BFF211B0CB513004070CB /* Dday Tasks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Dday Tasks.entitlements"; sourceTree = "<group>"; };
+		A09BFF221B0CB59F004070CB /* TasksManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksManager.swift; sourceTree = "<group>"; };
+		A09BFF241B0CB682004070CB /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		A09BFF281B0CC73B004070CB /* util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = util.swift; sourceTree = "<group>"; };
+		A09BFF2C1B0CD6D9004070CB /* GoogleCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleCalendar.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A09BFEDF1B0CB4E0004070CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A09BFEF71B0CB4E0004070CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A09BFF0B1B0CB4F1004070CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A09BFF111B0CB4F1004070CB /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A07EDFBF1B0E2A5B00B223A8 /* ItemRender */ = {
+			isa = PBXGroup;
+			children = (
+				A07EDFC61B0E4F0300B223A8 /* TaskCell.swift */,
+			);
+			name = ItemRender;
+			sourceTree = "<group>";
+		};
+		A09BFED91B0CB4E0004070CB = {
+			isa = PBXGroup;
+			children = (
+				A09BFEE41B0CB4E0004070CB /* Dday Tasks */,
+				A09BFEFD1B0CB4E0004070CB /* Dday TasksTests */,
+				A09BFF121B0CB4F1004070CB /* Widjet */,
+				A09BFF0F1B0CB4F1004070CB /* Frameworks */,
+				A09BFEE31B0CB4E0004070CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A09BFEE31B0CB4E0004070CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A09BFEE21B0CB4E0004070CB /* Dday Tasks.app */,
+				A09BFEFA1B0CB4E0004070CB /* Dday TasksTests.xctest */,
+				A09BFF0E1B0CB4F1004070CB /* Widjet.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A09BFEE41B0CB4E0004070CB /* Dday Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				A07EDFBF1B0E2A5B00B223A8 /* ItemRender */,
+				A09BFF2B1B0CD1A4004070CB /* task */,
+				A09BFF211B0CB513004070CB /* Dday Tasks.entitlements */,
+				A09BFEE71B0CB4E0004070CB /* AppDelegate.swift */,
+				A09BFEEC1B0CB4E0004070CB /* ViewController.swift */,
+				A09BFEEE1B0CB4E0004070CB /* Main.storyboard */,
+				A09BFEF11B0CB4E0004070CB /* Images.xcassets */,
+				A09BFEF31B0CB4E0004070CB /* LaunchScreen.xib */,
+				A09BFEE91B0CB4E0004070CB /* Dday_Tasks.xcdatamodeld */,
+				A09BFEE51B0CB4E0004070CB /* Supporting Files */,
+				A09BFF221B0CB59F004070CB /* TasksManager.swift */,
+				A09BFF241B0CB682004070CB /* Logger.swift */,
+				A09BFF281B0CC73B004070CB /* util.swift */,
+				A07EDFC01B0E486F00B223A8 /* OptionController.swift */,
+				A07EDFC21B0E48A200B223A8 /* HideTaskController.swift */,
+				A07EDFC41B0E48B800B223A8 /* AddTaskController.swift */,
+			);
+			path = "Dday Tasks";
+			sourceTree = "<group>";
+		};
+		A09BFEE51B0CB4E0004070CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A09BFEE61B0CB4E0004070CB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A09BFEFD1B0CB4E0004070CB /* Dday TasksTests */ = {
+			isa = PBXGroup;
+			children = (
+				A09BFF001B0CB4E0004070CB /* Dday_TasksTests.swift */,
+				A09BFEFE1B0CB4E0004070CB /* Supporting Files */,
+			);
+			path = "Dday TasksTests";
+			sourceTree = "<group>";
+		};
+		A09BFEFE1B0CB4E0004070CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A09BFEFF1B0CB4E0004070CB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A09BFF0F1B0CB4F1004070CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A09BFF101B0CB4F1004070CB /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A09BFF121B0CB4F1004070CB /* Widjet */ = {
+			isa = PBXGroup;
+			children = (
+				A09BFF201B0CB506004070CB /* Widjet.entitlements */,
+				A09BFF151B0CB4F1004070CB /* TodayViewController.swift */,
+				A09BFF171B0CB4F1004070CB /* MainInterface.storyboard */,
+				A09BFF131B0CB4F1004070CB /* Supporting Files */,
+			);
+			path = Widjet;
+			sourceTree = "<group>";
+		};
+		A09BFF131B0CB4F1004070CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A09BFF141B0CB4F1004070CB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A09BFF2B1B0CD1A4004070CB /* task */ = {
+			isa = PBXGroup;
+			children = (
+				A09BFF2C1B0CD6D9004070CB /* GoogleCalendar.swift */,
+				A07EDFBD1B0E061A00B223A8 /* CalendarEvent.swift */,
+				A07EDFC81B0E50D600B223A8 /* TaskData.swift */,
+			);
+			name = task;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A09BFEE11B0CB4E0004070CB /* Dday Tasks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A09BFF041B0CB4E0004070CB /* Build configuration list for PBXNativeTarget "Dday Tasks" */;
+			buildPhases = (
+				A09BFEDE1B0CB4E0004070CB /* Sources */,
+				A09BFEDF1B0CB4E0004070CB /* Frameworks */,
+				A09BFEE01B0CB4E0004070CB /* Resources */,
+				A09BFF1F1B0CB4F1004070CB /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A09BFF1A1B0CB4F1004070CB /* PBXTargetDependency */,
+			);
+			name = "Dday Tasks";
+			productName = "Dday Tasks";
+			productReference = A09BFEE21B0CB4E0004070CB /* Dday Tasks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A09BFEF91B0CB4E0004070CB /* Dday TasksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A09BFF071B0CB4E0004070CB /* Build configuration list for PBXNativeTarget "Dday TasksTests" */;
+			buildPhases = (
+				A09BFEF61B0CB4E0004070CB /* Sources */,
+				A09BFEF71B0CB4E0004070CB /* Frameworks */,
+				A09BFEF81B0CB4E0004070CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A09BFEFC1B0CB4E0004070CB /* PBXTargetDependency */,
+			);
+			name = "Dday TasksTests";
+			productName = "Dday TasksTests";
+			productReference = A09BFEFA1B0CB4E0004070CB /* Dday TasksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A09BFF0D1B0CB4F1004070CB /* Widjet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A09BFF1C1B0CB4F1004070CB /* Build configuration list for PBXNativeTarget "Widjet" */;
+			buildPhases = (
+				A09BFF0A1B0CB4F1004070CB /* Sources */,
+				A09BFF0B1B0CB4F1004070CB /* Frameworks */,
+				A09BFF0C1B0CB4F1004070CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Widjet;
+			productName = Widjet;
+			productReference = A09BFF0E1B0CB4F1004070CB /* Widjet.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A09BFEDA1B0CB4E0004070CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = neosoft;
+				TargetAttributes = {
+					A09BFEE11B0CB4E0004070CB = {
+						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 3Y45KQT827;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					A09BFEF91B0CB4E0004070CB = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = A09BFEE11B0CB4E0004070CB;
+					};
+					A09BFF0D1B0CB4F1004070CB = {
+						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 3Y45KQT827;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = A09BFEDD1B0CB4E0004070CB /* Build configuration list for PBXProject "Dday Tasks" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A09BFED91B0CB4E0004070CB;
+			productRefGroup = A09BFEE31B0CB4E0004070CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A09BFEE11B0CB4E0004070CB /* Dday Tasks */,
+				A09BFEF91B0CB4E0004070CB /* Dday TasksTests */,
+				A09BFF0D1B0CB4F1004070CB /* Widjet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A09BFEE01B0CB4E0004070CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A09BFEF01B0CB4E0004070CB /* Main.storyboard in Resources */,
+				A09BFEF51B0CB4E0004070CB /* LaunchScreen.xib in Resources */,
+				A09BFEF21B0CB4E0004070CB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A09BFEF81B0CB4E0004070CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A09BFF0C1B0CB4F1004070CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A09BFF181B0CB4F1004070CB /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A09BFEDE1B0CB4E0004070CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A09BFF251B0CB682004070CB /* Logger.swift in Sources */,
+				A09BFF291B0CC73B004070CB /* util.swift in Sources */,
+				A07EDFBE1B0E061A00B223A8 /* CalendarEvent.swift in Sources */,
+				A09BFEED1B0CB4E0004070CB /* ViewController.swift in Sources */,
+				A07EDFC71B0E4F0300B223A8 /* TaskCell.swift in Sources */,
+				A07EDFC51B0E48B800B223A8 /* AddTaskController.swift in Sources */,
+				A09BFEEB1B0CB4E0004070CB /* Dday_Tasks.xcdatamodeld in Sources */,
+				A09BFF231B0CB59F004070CB /* TasksManager.swift in Sources */,
+				A07EDFC11B0E486F00B223A8 /* OptionController.swift in Sources */,
+				A09BFF2D1B0CD6D9004070CB /* GoogleCalendar.swift in Sources */,
+				A07EDFC91B0E50D600B223A8 /* TaskData.swift in Sources */,
+				A07EDFC31B0E48A200B223A8 /* HideTaskController.swift in Sources */,
+				A09BFEE81B0CB4E0004070CB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A09BFEF61B0CB4E0004070CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A09BFF011B0CB4E0004070CB /* Dday_TasksTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A09BFF0A1B0CB4F1004070CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A09BFF261B0CB704004070CB /* TasksManager.swift in Sources */,
+				A09BFF271B0CB704004070CB /* Logger.swift in Sources */,
+				A09BFF161B0CB4F1004070CB /* TodayViewController.swift in Sources */,
+				A09BFF2A1B0CC781004070CB /* util.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A09BFEFC1B0CB4E0004070CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A09BFEE11B0CB4E0004070CB /* Dday Tasks */;
+			targetProxy = A09BFEFB1B0CB4E0004070CB /* PBXContainerItemProxy */;
+		};
+		A09BFF1A1B0CB4F1004070CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A09BFF0D1B0CB4F1004070CB /* Widjet */;
+			targetProxy = A09BFF191B0CB4F1004070CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A09BFEEE1B0CB4E0004070CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A09BFEEF1B0CB4E0004070CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A09BFEF31B0CB4E0004070CB /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A09BFEF41B0CB4E0004070CB /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A09BFF021B0CB4E0004070CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A09BFF031B0CB4E0004070CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A09BFF051B0CB4E0004070CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Dday Tasks/Dday Tasks.entitlements";
+				INFOPLIST_FILE = "Dday Tasks/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A09BFF061B0CB4E0004070CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Dday Tasks/Dday Tasks.entitlements";
+				INFOPLIST_FILE = "Dday Tasks/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A09BFF081B0CB4E0004070CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Dday TasksTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dday Tasks.app/Dday Tasks";
+			};
+			name = Debug;
+		};
+		A09BFF091B0CB4E0004070CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Dday TasksTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dday Tasks.app/Dday Tasks";
+			};
+			name = Release;
+		};
+		A09BFF1D1B0CB4F1004070CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widjet/Widjet.entitlements;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Widjet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A09BFF1E1B0CB4F1004070CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widjet/Widjet.entitlements;
+				INFOPLIST_FILE = Widjet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A09BFEDD1B0CB4E0004070CB /* Build configuration list for PBXProject "Dday Tasks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A09BFF021B0CB4E0004070CB /* Debug */,
+				A09BFF031B0CB4E0004070CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A09BFF041B0CB4E0004070CB /* Build configuration list for PBXNativeTarget "Dday Tasks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A09BFF051B0CB4E0004070CB /* Debug */,
+				A09BFF061B0CB4E0004070CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A09BFF071B0CB4E0004070CB /* Build configuration list for PBXNativeTarget "Dday TasksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A09BFF081B0CB4E0004070CB /* Debug */,
+				A09BFF091B0CB4E0004070CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A09BFF1C1B0CB4F1004070CB /* Build configuration list for PBXNativeTarget "Widjet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A09BFF1D1B0CB4F1004070CB /* Debug */,
+				A09BFF1E1B0CB4F1004070CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A09BFEE91B0CB4E0004070CB /* Dday_Tasks.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A09BFEEA1B0CB4E0004070CB /* Dday_Tasks.xcdatamodel */,
+			);
+			currentVersion = A09BFEEA1B0CB4E0004070CB /* Dday_Tasks.xcdatamodel */;
+			path = Dday_Tasks.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A09BFEDA1B0CB4E0004070CB /* Project object */;
+}
