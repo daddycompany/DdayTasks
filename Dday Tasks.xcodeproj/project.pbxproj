@@ -121,12 +121,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A07EDFBF1B0E2A5B00B223A8 /* ItemRender */ = {
+		A07EDFBF1B0E2A5B00B223A8 /* ItemCell */ = {
 			isa = PBXGroup;
 			children = (
 				A07EDFC61B0E4F0300B223A8 /* TaskCell.swift */,
 			);
-			name = ItemRender;
+			name = ItemCell;
 			sourceTree = "<group>";
 		};
 		A09BFED91B0CB4E0004070CB = {
@@ -153,7 +153,7 @@
 		A09BFEE41B0CB4E0004070CB /* Dday Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				A07EDFBF1B0E2A5B00B223A8 /* ItemRender */,
+				A07EDFBF1B0E2A5B00B223A8 /* ItemCell */,
 				A09BFF2B1B0CD1A4004070CB /* task */,
 				A09BFF211B0CB513004070CB /* Dday Tasks.entitlements */,
 				A09BFEE71B0CB4E0004070CB /* AppDelegate.swift */,
