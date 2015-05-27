@@ -51,7 +51,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    
     // MARK: UICollectionViewDataSource
     // 섹션 갯수 : 아이템이 반복되는 횟수 1로 두면 됨 , 2일때는 아이템이 2개씩 배치됨
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -70,6 +69,8 @@ class ViewController: UIViewController {
         let taskData:TaskData = CalendarEvent.eventList[indexPath.row]
         cell.index = indexPath.row
         cell.text.text = taskData.title
+        
+        cell.initCell()
         return cell
     }
     //컬렉션뷰의 셀 사이즈를 반환
@@ -81,10 +82,21 @@ class ViewController: UIViewController {
             return CGSize(width: sizeW, height: sizeH)
     }
 
-    
     //태스크 클릭 처리
-    func handleSelectTask(taskIndex:Int){
+    var selectedTaskIndex = 0
+    func handle_taskSwipe(taskIndex:Int){
+        Logger.log("handle_taskSwipe")
         
+        selectedTaskIndex = taskIndex
+        openEditPopup()
+    }
+    
+    //수정페이지로 이동 
+    func openEditPopup(){
+        var editView:EditTaskController = self.storyboard?.instantiateViewControllerWithIdentifier("EditTaskController") as! EditTaskController
+        var modalStyle: UIModalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        editView.modalTransitionStyle = modalStyle
+        self.presentViewController(editView, animated: true, completion: nil)
     }
     
     //로컬 푸쉬 및 알람 노출시 액션 처리 예제
